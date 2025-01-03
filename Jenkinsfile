@@ -25,11 +25,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying static website...'
-               sh '''
-					sudo mkdir -p /var/www/html/
-					sudo chown -R jenkins:jenkins /var/www/html/   # Replace 'jenkins' with the actual user
-					cp -r Jenkinsfile assets index.html readme.txt /var/www/html/
-				'''
+                bat '''
+                    echo Deploying static website...
+                    REM Add your deployment steps here
+                    '''
 
 
             }
